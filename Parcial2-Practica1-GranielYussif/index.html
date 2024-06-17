@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista De Tareas - Yussif Graniel</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-cuerpo">
+    <div class="container mt-5">
+        <h1 class="text-center">Lista de Tareas</h1>
+        <form id="taskForm">
+            <div class="form-group">
+                <label for="taskName">Nueva Tarea:</label>
+                <input type="text" class="form-control" id="taskName" required>
+            </div>
+            <div class="form-group">
+                <label for="startDate">Fecha de Inicio:</label>
+                <input type="date" class="form-control" id="startDate" required>
+            </div>
+            <div class="form-group">
+                <label for="endDate">Fecha de Fin:</label>
+                <input type="date" class="form-control" id="endDate" required>
+            </div>
+            <div class="form-group">
+                <label for="responsible">Responsable:</label>
+                <input type="text" class="form-control" id="responsible" required>
+            </div>
+            <button type="submit" class="btn btn-success">Agregar Tarea</button>
+        </form>
+        
+        <div class="mt-4">
+            <input type="text" id="searchBar" class="form-control" placeholder="Buscar tareas...">
+        </div>
+        
+        <div class="btn-group mt-3">
+            <button class="btn btn-secondary" onclick="filterTasks('all')">Todas</button>
+            <button class="btn btn-secondary" onclick="filterTasks('pending')">Pendientes</button>
+            <button class="btn btn-secondary" onclick="filterTasks('completed')">Resueltas</button>
+            <button class="btn btn-secondary" onclick="filterTasks('expired')">Vencidas</button>
+        </div>
+        
+        <div id="taskList" class="mt-4"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
