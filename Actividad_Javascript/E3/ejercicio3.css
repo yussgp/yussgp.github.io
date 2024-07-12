@@ -1,0 +1,41 @@
+.tema {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #121212; /* Fondo negro */
+    color: #ffffff; /* Letras blancas */
+    font-family: Arial, sans-serif;
+    padding-top: 80px;
+}
+
+.text-gradient {
+    background-image: linear-gradient(to left, #FFD700, #7B68EE, #3498db, #2ecc71, #FFD700);
+    color: transparent;    
+    background-clip: text;
+    background-size: 500%;
+    animation: color 3s linear infinite; 
+    transition: transform 0.5s ease-in-out; /* Transición para la transformación */
+    
+}
+
+@keyframes color {
+    from {
+        background-position: 0% 50%;
+    }
+    to {
+        background-position: 100% 50%;
+    }
+}
+
+#enseñar{
+    font-weight: bold;
+}
+
+#btn{
+    align-items: center;
+    justify-content: center;
+    margin-left: 150px;
+    color: aliceblue;
+}
