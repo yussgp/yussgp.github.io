@@ -1,0 +1,284 @@
+.tema {
+    background-color: #121212; /* Fondo negro */
+    color: #ffffff; /* Letras blancas */
+    font-family: Arial, sans-serif;
+    margin: 0 auto;
+    margin-top: 100px;
+    height: 150vh;   
+}
+
+.navbar-yellow {
+    background-color: rgb(182, 19, 7);
+}
+
+#logo {
+    height: auto;
+    width: 100px;
+    margin-right: 50px;
+    border-radius: 10px;
+}
+
+.pantalla {
+    width: 600px;
+    height: 400px;
+    background-color: red;
+    margin: 0 auto; /* Centrar horizontalmente */
+    border: 3px solid #000000;
+}
+#pantalla1 {
+    border-radius: 0 50px 0 0;
+    text-align: center;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.visor {
+    background-color: #000000;
+    height: 50vh;
+    width: 90vh;
+    display: flex;
+    flex-direction: column; /* Alinea elementos en columna */
+    align-items: center;
+    margin: 0;
+    border-radius: 0 20px 20px 0;
+    color: white; /* Para que el texto sea visible sobre el fondo negro */
+    overflow: hidden; /* Evitar que el contenido se salga del visor */
+}
+
+.observatorio {
+    background-color: #38e2da;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column; /* Alinea elementos en columna */
+    align-items: center;
+    justify-content: space-between;
+    padding: 1vh;
+    box-sizing: border-box; /* Asegurarse de que el padding no altere el tamaño del contenedor */
+}
+
+#sprite {
+    background-color: #fff;
+    border-radius: 50%;
+    height: 25vh;
+    width: 25vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#pokemon-info {
+    flex: 1; /* Permitir que el div ocupe el espacio restante */
+    text-align: left; /* Alinear el texto a la izquierda */
+    margin-left: 2vh;
+    font-family: Arial, sans-serif;
+}
+
+#searchbar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#search {
+    width: 30vh;
+    margin-top: 1vh;
+}
+
+#btn {
+    margin-left: 1vh;
+}
+
+#evolutions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.evolution {
+    text-align: center;
+    margin: 10px;
+}
+
+.evolution img {
+    display: block;
+    margin: 0 auto;
+}
+
+
+
+#pantalla2 {
+    border-radius: 0 0 50px 0;
+    text-align: center;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.banda {
+    display: flex;
+    background-color: #121212;
+    justify-content: center; /* Centrar los elementos horizontalmente */
+    align-items: center; /* Centrar los elementos verticalmente */
+    margin: 0 auto; /* Centrar horizontalmente */
+    width: 620px; /* Asegurarse de que el ancho sea consistente con .pantalla */
+    height: 50px; /* Ajustar según sea necesario */
+}
+
+.banda div {
+    background-color: red; /* Color de fondo para los divs internos */
+    width: 200px; /* Ancho de cada div interno */
+    height: 50px; /* Altura de cada div interno */
+    margin: 0 10px; /* Espaciado entre los divs */
+    border: 3px solid #000000; 
+}
+
+#pokebola-gris{
+    background-color: #000000;
+    height: 300px;
+    width: 300px;
+    border-radius: 0 100px 100px 0;
+    text-align: center;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    display: flex;
+}
+
+#circulo {
+    display: flex;
+    border: #000000 solid 3px;
+    border-radius: 50%; /* Esto asegura que el elemento sea un círculo perfecto */
+    height: 250px;
+    width: 250px;
+    background-color: #272525;
+    text-align: center;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    display: flex;
+}
+
+#circulito{
+    border: 6px solid black;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+
+}
+
+.cruceta{
+    border: #000000 solid 3px;
+    height: 64.62vh ;
+    width: 48.46526655896607vh;
+    border-radius: 50px 0 0 50px ;
+    background-color: #000000;
+    margin-left: -49vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.seccion1{
+    display: flex;
+}
+
+.semicirculo {
+    height: 48.46526655896607vh;
+    width: 48.46526655896607vh;
+    background-color: red;
+    border-radius: 50px 0 0 50px;
+    margin: 0;
+    margin-left: 9vh;
+    position: relative; /* Necesario para posicionar los elementos dentro con position: absolute */
+}
+
+.bocina {
+    position: relative; /* Necesario para posicionar los divs dentro con position: absolute */
+    height: 100%; /* Para que ocupe todo el espacio del semicirculo */
+    width: 100%; /* Para que ocupe todo el espacio del semicirculo */
+}
+
+.bocina div {
+    background-color: black;
+    border-radius: 50%;
+    height: 10vh;
+    width: 10vh;
+    position: absolute; /* Para posicionar los botones relativamente a .bocina */
+}
+
+#cc1 {
+    top: 40%; /* Posicionarlo a la mitad verticalmente */
+    left: 50%; /* Posicionarlo a la mitad horizontalmente */
+    transform: translate(-50%, -100%); /* Subirlo para que quede arriba */
+}
+
+#cc2 {
+    top: 60%; /* Posicionarlo a la mitad verticalmente */
+    left: 50%; /* Posicionarlo a la mitad horizontalmente */
+    transform: translate(-50%, 0); /* Mantenerlo en el centro */
+}
+
+#cc3 {
+    top: 50%; /* Posicionarlo a la mitad verticalmente */
+    left: 40%; /* Posicionarlo a la mitad horizontalmente */
+    transform: translate(-100%, -50%); /* Moverlo hacia la izquierda */
+}
+
+#cc4 {
+    top: 50%; /* Posicionarlo a la mitad verticalmente */
+    left: 60%; /* Posicionarlo a la mitad horizontalmente */
+    transform: translate(0, -50%); /* Mantenerlo en el centro */
+}
+
+.seccion2{
+    display: flex;
+    margin-left: 356px;
+
+}
+
+.cruces {
+    height: 48.46526655896607vh;
+    width: 48.46526655896607vh;
+    border-radius: 50%;
+    border: #272525 solid 3px;
+    position: relative; /* Necesario para que los hijos absolutamente posicionados se posicionen relativamente a .cruces */
+}
+
+.cruces button {
+    background-color: #272525;
+    border-radius: 10px;
+    height: 10vh;
+    width: 10vh;
+    position: absolute; /* Para posicionar los botones relativamente a .cruces */
+}
+
+#arriba {
+    top: 5vh;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#abajo {
+    bottom: 5vh;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#izquierda {
+    left: 5vh;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#derecha {
+    right: 5vh;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
