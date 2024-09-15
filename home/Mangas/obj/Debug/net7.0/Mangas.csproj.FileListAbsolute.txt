@@ -31,3 +31,4 @@ C:\Users\acer\home\Mangas\obj\Debug\net7.0\refint\Mangas.dll
 C:\Users\acer\home\Mangas\obj\Debug\net7.0\Mangas.pdb
 C:\Users\acer\home\Mangas\obj\Debug\net7.0\Mangas.genruntimeconfig.cache
 C:\Users\acer\home\Mangas\obj\Debug\net7.0\ref\Mangas.dll
+C:\Users\acer\home\Mangas\bin\Debug\net7.0\Infraestructure\Data\javerages.library.data.json
