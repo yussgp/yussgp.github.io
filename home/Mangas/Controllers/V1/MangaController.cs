@@ -1,3 +1,5 @@
+using AutoMapper;
+using manga.Domain.Dtos;
 using mangas.Domain.Entities;
 using mangas.Services.Features.Mangas;
 using Microsoft.AspNetCore.Mvc;
@@ -10,17 +12,22 @@ namespace mangas.Controllers.V1;
 public class MangaController : ControllerBase
 {
     private readonly MangaService _mangaService;
+    private readonly IMapper _mapper;
 
-    public MangaController(MangaService mangaService)
+    public MangaController(MangaService mangaService, IMapper mapper)
     {
         this._mangaService = mangaService;
+        this._mapper = mapper;
     }
 
 
     [HttpGet]
     public IActionResult GetAll()
     {
-        return Ok(_mangaService.GetAll());
+        var mangas = _mangaService.GetAll();
+        var mangaDtos = _mapper.Map<IEnumerable<MangaDTO>>(mangas);
+
+        return Ok(mangaDtos);
     }
 
 
@@ -28,18 +35,27 @@ public class MangaController : ControllerBase
     public IActionResult GetById([FromRoute]int id)
     {
         var manga = _mangaService.GetById(id);
-        if (manga == null)
+        if (manga.Id <= 0)
         {
             return NotFound();
         }
-        return Ok(manga);
+        var dto = _mapper.Map<MangaDTO>(manga);
+        return Ok(dto);
     }
 
     [HttpPost]
     public IActionResult Add([FromBody]Manga manga)
     {
-        _mangaService.Add(manga);
-        return CreatedAtAction(nameof(GetById), new { id = manga.Id }, manga);
+        var entity = _mapper.Map<Manga>(manga);
+
+        var mangas = _mangaService.GetAll();
+        var mangaId = mangas.Count() + 1;
+
+        entity.Id = mangaId;
+        _mangaService.Add(entity);
+
+        var dto = _mapper.Map<MangaDTO>(entity);
+        return CreatedAtAction(nameof(GetById), new { id = manga.Id }, dto);
     }
 
     [HttpPut]

@@ -1,5 +1,7 @@
 using mangas.Services.Features.Mangas;
 using mangas.Infraestructure.Repositories;
+using Microsoft.AspNetCore.Components.RenderTree;
+using manga.Services.MappingsM;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,6 +15,8 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddAutoMapper(typeof(ResponseMappingProfile).Assembly);
 
 var app = builder.Build();
 
